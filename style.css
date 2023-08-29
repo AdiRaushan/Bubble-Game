@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   box-sizing: border-box;
 }
 
@@ -43,14 +43,44 @@ body {
   align-items: center;
   gap: 20px;
 }
+.elem h2 {
+  font-weight: 500;
+  font-size: 22px;
+}
 
 .box {
   padding: 10px;
   background-color: white;
   color: black;
-  font-weight: 700;
-  font-size: 25px;
+  font-weight: 600;
+  font-size: 22px;
   border-radius: 5px;
 }
 #pbtm {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 11px;
+  padding: 20px;
+  width: 100%;
+  height: calc(
+    100% - 100px
+  ); /* cal is to calculate 100% to 100px its a function in css*/
+}
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+  background-color: rgb(72, 104, 72);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 550;
+  font-size: 20px;
+}
+.bubble:hover {
+  cursor: pointer;
+  background-color: rgb(51, 68, 34);
 }
