@@ -1,3 +1,16 @@
+var timer = 6;
+var score = 0;
+var Hitrn = 0;
+const IncreaseScore = () => {
+  score += 10;
+  document.querySelector("#scored").textContent = score;
+};
+
+const GetHit = () => {
+  Hitrn = Math.floor(Math.random() * 10);
+
+  document.querySelector("#GetHit").textContent = Hitrn;
+};
 const makeBubble = () => {
   var clutter = "";
 
@@ -9,14 +22,30 @@ const makeBubble = () => {
   document.querySelector("#pbtm").innerHTML = clutter;
 };
 
-var timer = 60;
 const GameTime = () => {
-  setInterval(() => {
-    timer--;
-    document.querySelector("#timer").textContent = timer;
+  var timeout = setInterval(() => {
+    if (timer > 0) {
+      timer--;
+      document.querySelector("#timer").textContent = timer;
+    } else {
+      clearInterval(timeout);
+      document.querySelector("#pbtm").innerHTML = `<h1> Game Over<h1/>`;
+    }
   }, 1000);
 };
+
+document.querySelector("#pbtm").addEventListener("click", (dets) => {
+  let Click_NUm = Number(dets.target.textContent);
+  console.log(Click_NUm);
+  if (Click_NUm == Hitrn) {
+    IncreaseScore();
+    GetHit();
+    makeBubble();
+  } else {
+    makeBubble();
+  }
+});
 makeBubble();
 GameTime();
-
-// console.log(time);
+GetHit();
+// IncreaseScore();
