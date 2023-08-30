@@ -1,6 +1,12 @@
-var timer = 6;
+var timer = 60;
 var score = 0;
 var Hitrn = 0;
+
+// reload the page
+document.querySelector("#reload").addEventListener("click", () => {
+  location.reload();
+});
+
 const IncreaseScore = () => {
   score += 10;
   document.querySelector("#scored").textContent = score;
@@ -45,6 +51,7 @@ document.querySelector("#pbtm").addEventListener("click", (dets) => {
     makeBubble();
   }
 });
+
 makeBubble();
 GameTime();
 GetHit();

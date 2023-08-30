@@ -10,6 +10,15 @@ body {
   width: 100%;
   height: 100%;
 }
+button {
+  height: 6%;
+  width: 100px;
+  margin-right: 28px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #223a1f;
+}
 
 #main {
   display: flex;
@@ -17,7 +26,8 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: rgb(184, 221, 184);
+  background-image: url(/pexels-rahul-pandit-1203379.jpg);
+  background-position: center;
 }
 
 #panel {
@@ -58,6 +68,7 @@ body {
 }
 #pbtm {
   display: flex;
+  background-color: #223a1f;
   justify-content: center;
   align-items: center;
   font-size: 25px;
